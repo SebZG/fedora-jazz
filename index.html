@@ -20,7 +20,49 @@
     <link rel=" stylesheet" href="./css/styles.css">
 </head>
 
-<body>
+<!-- Body classes for keeping footer at the bottom -->
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navbar with classes to keep it always on top -->
+    <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">FJ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" aria-current="page" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Home
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">About</a></li>
+                            <li><a class="dropdown-item" href="#">Instruments</a></li>
+                            <li><a class="dropdown-item" href="#">Teachers</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Where are we?</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline ms-lg-3" href="#">Let's Jam!</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 </body>
 
@@ -31,5 +73,31 @@
 
 <!-- Font Awesome Kit -->
 <script src="https://kit.fontawesome.com/c1bc576c12.js" crossorigin="anonymous"></script>
+
+<!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
+<script>
+    document
+        .querySelectorAll(".navbar-collapse .nav-link")
+        .forEach((link) => {
+            link.addEventListener("click", function (e) {
+                let section = document.querySelector(e.target.getAttribute("href"));
+
+                if (section) {
+                    e.preventDefault(); // Prevent default anchor click behavior
+
+                    let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight;
+
+                    window.scroll({
+                        top: section.offsetTop - navbarHeight, // Adjust for navbar height
+                        behavior: "smooth",
+                    });
+
+                    document
+                        .querySelector(".navbar-collapse")
+                        .classList.remove("show"); // Collapse navbar
+                }
+            });
+        });
+</script>
 
 </html>
