@@ -1,13 +1,17 @@
 /*
 Google Fonts Import
 */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* 
 CSS Variables
 */
 :root {
     /* Colors */
+    /* Black (000) */
+    --color-black-000: #000;
+    /* Black (111) */
+    --color-black-111: #111;
     /* Black (222) */
     --color-black-222: #222;
     /* Rojo (red) */
@@ -16,14 +20,15 @@ CSS Variables
     --color-gold-yellow: #FFD700;
     /* Celeste (blue) */
     --color-celeste-blue: #A8F9FF;
-    /* Papaya Whip (white) */
-    --color-papayawhip-white: #FFF1D0;
+    /* (green) */
+    --color-green: #00FF00;
+    /* Papaya Whip (off white) */
+    --color-papayawhip-offwhite: #FFF1D0;
     /* White Smoke (white) */
     --color-whitesmoke-white: #F2F4F3;
 
     /* Fonts */
     --font-poppins: "Poppins", sans-serif;
-    --font-roboto: "Roboto", sans-serif;
 
 }
 
@@ -32,18 +37,24 @@ Global Styles
 */
 
 body {
-    /* font-family: var(--font-roboto); */
     font-family: var(--font-poppins);
-    background-color: var(--color-papayawhip-white);
+    background-color: var(--color-papayawhip-offwhite);
     /* background-color: var(--color-whitesmoke-white); */
     /* TODO: Add padding-top to keep footer at the bottom */
-    /* padding-top: px; */
+    padding-top: 11rem;
+}
+
+::selection {
+    background-color: var(--color-celeste-blue);
+}
+
+::-moz-selection {
+    background-color: var(--color-celeste-blue);
 }
 
 /* Buttons */
 
 .btn-bg {
-    /* background-color: var(--color-gold-yellow); */
     background-color: var(--color-rojo-red);
     color: var(--color-black-222);
     /* font-weight: 500; */
@@ -54,22 +65,30 @@ body {
     color: var(--color-rojo-red);
 }
 
-.btn-outline {
+.nav-item .btn-outline {
     border: 2px solid var(--color-rojo-red);
     color: var(--color-rojo-red);
     /* font-weight: 500; */
 }
 
-.btn-outline:hover {
-    /* background-color: var(--color-gold-yellow); */
-    /* color: var(--color-black-222); */
-    border: 2px solid var(--color-gold-yellow);
-    color: var(--color-gold-yellow);
+.nav-item .btn-outline:hover {
+    border: 2px solid var(--color-green);
+    color: var(--color-green);
 }
 
-.btn.btn-outline:active {
-    background-color: var(--color-gold-yellow);
+.nav-item .btn-outline:active {
+    background-color: var(--color-green);
     color: var(--color-black-222);
+}
+
+/* Utilities */
+
+.section {
+    padding: 6rem 0;
+}
+
+.span-red {
+    color: var(--color-rojo-red);
 }
 
 /* 
@@ -77,43 +96,41 @@ Navbar
 */
 
 nav {
-    background-color: var(--color-black-222);
+    background-color: var(--color-black-111);
+    opacity: 90%;
 }
 
-.navbar-brand {
-    /* Temporary */
-    color: var(--color-rojo-red);
-    font-size: 2rem;
+.navbar-nav .nav-item,
+.dropdown-menu .dropdown-item,
+.navbar-nav .nav-item .btn {
+    font-size: 1.25rem;
 }
 
-/* Temporary */
-.navbar-brand:hover {
-    color: var(--color-rojo-red);
+/* Navbar Logo */
+nav .logo-nav {
+    width: 7rem;
 }
 
+nav .navbar-brand p {
+    margin-top: -1.25rem;
+    color: var(--color-papayawhip-offwhite);
+}
+
+/* Navbar Links */
 .navbar-nav .nav-link {
-    color: var(--color-papayawhip-white);
-    /* color: var(--color-gold-yellow); */
+    color: var(--color-papayawhip-offwhite);
 }
 
 .navbar-nav .nav-link:hover {
-    /* color: var(--color-whitesmoke-white); */
     color: var(--color-gold-yellow);
 }
 
 .navbar-nav .nav-link:active,
 .active {
-    /* color: var(--color-papayawhip-white); */
     color: var(--color-celeste-blue);
 }
 
-.navbar-nav .nav-link:focus {
-    /* color: var(--color-papayawhip-white); */
-    /* color: var(--color-celeste-blue); */
-}
-
 .nav-link.active {
-    /* color: var(--color-celeste-blue); */
     --bs-navbar-active-color: var(--color-celeste-blue);
 }
 
@@ -123,7 +140,7 @@ nav {
 }
 
 .dropdown-menu .dropdown-item {
-    color: var(--color-papayawhip-white);
+    color: var(--color-papayawhip-offwhite);
 }
 
 .dropdown-menu .dropdown-item:hover {
