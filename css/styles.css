@@ -39,9 +39,8 @@ Global Styles
 body {
     font-family: var(--font-poppins);
     background-color: var(--color-papayawhip-offwhite);
-    /* background-color: var(--color-whitesmoke-white); */
     /* TODO: Add padding-top to keep footer at the bottom */
-    padding-top: 11rem;
+    padding-top: 8rem;
 }
 
 ::selection {
@@ -56,8 +55,7 @@ body {
 
 .btn-bg {
     background-color: var(--color-rojo-red);
-    color: var(--color-black-222);
-    /* font-weight: 500; */
+    color: var(--color-black-111);
 }
 
 .btn-bg:hover {
@@ -68,7 +66,6 @@ body {
 .nav-item .btn-outline {
     border: 2px solid var(--color-rojo-red);
     color: var(--color-rojo-red);
-    /* font-weight: 500; */
 }
 
 .nav-item .btn-outline:hover {
@@ -78,14 +75,13 @@ body {
 
 .nav-item .btn-outline:active {
     background-color: var(--color-celeste-blue);
-    color: var(--color-black-222);
+    color: var(--color-black-111);
 }
 
 /* Utilities */
 
 .section {
-    padding: 4rem 0;
-    /* padding-top: 4rem; */
+    padding: 3rem 0;
 }
 
 .span-red {
@@ -116,7 +112,7 @@ nav .logo-nav {
 nav .navbar-brand p {
     margin-top: -1.25rem;
     color: var(--color-papayawhip-offwhite);
-    
+
 }
 
 /* Navbar Links */
@@ -167,4 +163,18 @@ About Section
 #about {
     background-color: var(--color-black-111);
     color: var(--color-papayawhip-offwhite);
+}
+
+/* 
+What we teach section
+*/
+
+#what-we-teach {
+    background-color: var(--color-papayawhip-offwhite);
+    color: var(--color-black-111);
+}
+
+.carousel-img {
+    height: 400px;
+    object-fit: cover;
 }
