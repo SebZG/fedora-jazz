@@ -40,7 +40,7 @@ body {
     font-family: var(--font-poppins);
     background-color: var(--color-papayawhip-offwhite);
     /* TODO: Add padding-top to keep footer at the bottom */
-    padding-top: 8rem;
+    padding-top: 7rem;
 }
 
 ::selection {
@@ -49,6 +49,12 @@ body {
 
 ::-moz-selection {
     background-color: var(--color-celeste-blue);
+}
+
+#about,
+#meet-our-teachers,
+#what-we-teach {
+    scroll-margin-top: 6.5rem;
 }
 
 /* Buttons */
@@ -105,14 +111,13 @@ nav {
 
 /* Navbar Logo */
 nav .logo-nav {
-    width: calc(5rem + 1vw);
+    width: 5rem;
     height: 100%;
 }
 
 nav .navbar-brand p {
-    margin-top: -1.25rem;
+    margin-top: -0.75rem;
     color: var(--color-papayawhip-offwhite);
-
 }
 
 /* Navbar Links */
@@ -157,7 +162,7 @@ nav .navbar-brand p {
 }
 
 /* 
-About Section
+About section
 */
 
 #about {
@@ -177,4 +182,28 @@ What we teach section
 .carousel-img {
     height: 400px;
     object-fit: cover;
+}
+
+/* 
+Meet our teachers section
+*/
+
+#meet-our-teachers {
+    background-color: var(--color-black-111);
+    color: var(--color-papayawhip-offwhite);
+}
+
+.card-grid-img {
+    height: 350px;
+    object-fit: cover;
+}
+
+.card-body {
+    background-color: var(--color-papayawhip-offwhite);
+}
+
+.card-body .card-title,
+.card-body .card-text {
+    color: var(--color-black-111);
+    text-align: center;
 }
