@@ -35,9 +35,9 @@
     <!-- Navbar with classes to keep it always on top -->
     <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
         <div class="container">
-            <a class="navbar-brand d-flex flex-column align-items-center" href="#">
+            <a class="navbar-brand d-flex align-items-center" href="#">
                 <img class="logo-nav" src="./assets/media/logo/FJ-black-red-canva-500x500.png" alt="logo">
-                <p class="fs-3">School</p>
+                <p class="fs-4">School</p>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -76,11 +76,11 @@
     </nav>
 
     <!-- Hero section -->
-    <header class="container section">
+    <header id="hero" class="container-fluid section">
         <div class="row">
             <div class="col d-flex flex-column">
 
-                <video class="hero-video mx-auto" width="85%" height="100%" controls autoplay muted loop>
+                <video class="hero-video mx-auto" width="65%" height="100%" controls muted loop>
                     <source class="" src="./assets/media/videos/fj-hero-video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -89,7 +89,55 @@
         </div>
     </header>
 
+    <main>
 
+        <!-- About -->
+        <section id="about" class="container-fluid section">
+            <div class="row">
+                <div class="col">
+
+                    <div class="container">
+                        <div class="row">
+
+                            <!-- <div class="col-12"> -->
+                            <h2 class="display-5 text-center mb-5">About us</h2>
+
+                            <div class="col-lg-5 me-auto px-4 px-sm-0">
+                                <p class="lead">
+                                    Fedora Jazz School offers one-to-one tuition for instrumentalists and singers of
+                                    all
+                                    ages and abilities. Based at the Barbican Center in the heart of London, we also
+                                    offer improvisation workshops, and a variety of ensembles with opportunities for
+                                    students to perform to an audience.
+                                </p>
+                            </div>
+                            <div class="col-lg-5 ms-auto px-4 px-sm-0 d-flex flex-column">
+                                <p class="mb-auto mb-lg-auto mb-md-2 mb-sm-1">
+                                    Our teachers are veterans and innovators in the Jazz scene, with years of
+                                    experience
+                                    in improvisation, performing, and teaching.
+                                </p>
+
+                                <br class="d-block d-sm-none">
+
+                                <p class="mt-auto mt-lg-auto mt-md-2 mt-sm-1">
+                                    Our teachers work with both adults and children off all ages, and make sure to
+                                    pair
+                                    students with the teacher that suits their needs and availability.
+                                </p>
+                            </div>
+                            <!-- </div> -->
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
 
 </body>
 
@@ -104,25 +152,12 @@
 <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
 <script>
     document
-        .querySelectorAll(".navbar-collapse .nav-link")
-        .forEach((link) => {
-            link.addEventListener("click", function (e) {
-                let section = document.querySelector(e.target.getAttribute("href"));
-
-                if (section) {
-                    e.preventDefault(); // Prevent default anchor click behavior
-
-                    let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight;
-
-                    window.scroll({
-                        top: section.offsetTop - navbarHeight, // Adjust for navbar height
-                        behavior: "smooth",
-                    });
-
-                    document
-                        .querySelector(".navbar-collapse")
-                        .classList.remove("show"); // Collapse navbar
-                }
+        .querySelectorAll(".dropdown-menu .dropdown-item")
+        .forEach((item) => {
+            item.addEventListener("click", function () {
+                document
+                    .querySelector(".navbar-collapse")
+                    .classList.remove("show"); // Collapse navbar
             });
         });
 </script>

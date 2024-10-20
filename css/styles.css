@@ -61,7 +61,7 @@ body {
 }
 
 .btn-bg:hover {
-    background-color: var(--color-gold-yellow);
+    background-color: var(--color-celeste-blue);
     color: var(--color-rojo-red);
 }
 
@@ -72,19 +72,20 @@ body {
 }
 
 .nav-item .btn-outline:hover {
-    border: 2px solid var(--color-green);
-    color: var(--color-green);
+    border: 2px solid var(--color-celeste-blue);
+    color: var(--color-celeste-blue);
 }
 
 .nav-item .btn-outline:active {
-    background-color: var(--color-green);
+    background-color: var(--color-celeste-blue);
     color: var(--color-black-222);
 }
 
 /* Utilities */
 
 .section {
-    padding: 6rem 0;
+    padding: 4rem 0;
+    /* padding-top: 4rem; */
 }
 
 .span-red {
@@ -108,12 +109,14 @@ nav {
 
 /* Navbar Logo */
 nav .logo-nav {
-    width: 7rem;
+    width: calc(5rem + 1vw);
+    height: 100%;
 }
 
 nav .navbar-brand p {
     margin-top: -1.25rem;
     color: var(--color-papayawhip-offwhite);
+    
 }
 
 /* Navbar Links */
@@ -122,7 +125,7 @@ nav .navbar-brand p {
 }
 
 .navbar-nav .nav-link:hover {
-    color: var(--color-gold-yellow);
+    color: var(--color-celeste-blue);
 }
 
 .navbar-nav .nav-link:active,
@@ -136,7 +139,7 @@ nav .navbar-brand p {
 
 /* Dropdown Menu */
 .dropdown-menu {
-    background-color: var(--color-black-222);
+    background-color: var(--color-black-111);
 }
 
 .dropdown-menu .dropdown-item {
@@ -144,15 +147,24 @@ nav .navbar-brand p {
 }
 
 .dropdown-menu .dropdown-item:hover {
-    color: var(--color-gold-yellow);
-    background-color: var(--color-black-222);
+    color: var(--color-celeste-blue);
+    background-color: var(--color-black-111);
 }
 
 .dropdown-menu .dropdown-item:active {
     color: var(--color-celeste-blue);
-    background-color: var(--color-black-222);
+    background-color: var(--color-black-111);
 }
 
 .dropdown-divider {
     border-color: var(--color-celeste-blue);
+}
+
+/* 
+About Section
+*/
+
+#about {
+    background-color: var(--color-black-111);
+    color: var(--color-papayawhip-offwhite);
 }
