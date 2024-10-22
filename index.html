@@ -440,6 +440,62 @@
             </div>
         </section>
 
+        <!-- Footer with classes to keep footer at the bottom -->
+        <footer class="section mt-auto">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <!-- Contact info -->
+                    <div class="col-12 col-sm-6 col-md-5 col-xl-4 text-center text-md-start">
+
+                        <h3>Contact info</h3>
+
+                        <address>
+                            <i class="fa-solid fa-location-dot"></i> <strong>Barbican Centre</strong><br>
+                            Silk Street, Barbican<br>
+                            London, EC2Y 8DS
+                        </address>
+
+                        <p>
+                            <i class="fa-solid fa-phone"></i> 020 1234 5678<br>
+                            <i class="fa-regular fa-paper-plane"></i> info@fj-school.edu
+                        </p>
+
+                    </div>
+
+                    <!-- Social media links -->
+                    <div class="col-12 col-sm-6 col-md-5 col-xl-4 text-center mt-4 mt-sm-0">
+
+                        <h3>Social links</h3>
+
+                        <div class="social-links my-3 my-sm-4">
+                            <a class="mx-2" href="https://www.instagram.com" target="_blank"
+                                aria-label="Visit our Instagram page (opens in a new tab)" rel="noopener">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a class="mx-2" href="https://www.facebook.com" target="_blank"
+                                aria-label="Visit our Facebook page (opens in a new tab)" rel="noopener">
+                                <i class="fa-brands fa-square-facebook"></i>
+                            </a>
+                            <a class="mx-2" href="https://www.x.com" target="_blank"
+                                aria-label="Visit our X feed (opens in a new tab)" rel="noopener">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- logo -->
+                    <div>
+                        <a class="span-szg text-center mt-5 mx-auto" href="https://github.com/SebZG" target="_blank"
+                            rel="noopener">
+                            SZG()
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
     </main>
 
 </body>
@@ -452,8 +508,8 @@
 <!-- Font Awesome Kit -->
 <script src="https://kit.fontawesome.com/c1bc576c12.js" crossorigin="anonymous"></script>
 
-<!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
 <script>
+    // Close the navbar on mobile view when a link is clicked
     document
         .querySelectorAll(".dropdown-menu .dropdown-item")
         .forEach((item) => {
@@ -463,6 +519,11 @@
                     .classList.remove("show"); // Collapse navbar
             });
         });
+
+    // Dynamic year for the footer
+    // const year = new Date().getFullYear();
+    // const copyrightYear = document.querySelector("span-year");
+    // copyrightYear.innerHTML = year;
 </script>
 
 </html>
