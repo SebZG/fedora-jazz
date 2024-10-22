@@ -216,11 +216,14 @@ Meet our teachers section
     color: var(--color-papayawhip-offwhite);
 }
 
+/* Make teachers cards scrollable.
+   Inspired by w3schools.com.
+   Customized to suit project.
+*/
 .teachers-cards {
     background-color: #333;
     overflow-y: scroll;
     max-height: calc(100vh - 110px);
-    /* white-space: nowrap; */
     padding: 3rem;
 }
 
@@ -249,7 +252,9 @@ Find us here section
     border: 0;
 }
 
-/* Footer */
+/* 
+Footer 
+*/
 
 footer {
     background-color: var(--color-black-111);
