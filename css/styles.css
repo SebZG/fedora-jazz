@@ -15,6 +15,8 @@ CSS Variables
     --color-black-111: #111;
     /* Black (222) */
     --color-black-222: #222;
+    /* Black (333) */
+    --color-black-333: #333;
     /* Rojo (red) */
     --color-rojo-red: #FF3131;
     /* Gold (yellow) */
@@ -198,10 +200,6 @@ About section
     color: var(--color-papayawhip-offwhite);
 }
 
-/* 
-What we teach section
-*/
-
 .carousel-img {
     height: 400px;
     object-fit: cover;
@@ -221,7 +219,7 @@ Meet our teachers section
    Customized to suit project.
 */
 .teachers-cards {
-    background-color: #333;
+    background-color: var(--color-black-333);
     overflow-y: scroll;
     max-height: calc(100vh - 110px);
     padding: 3rem;
