@@ -46,28 +46,21 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" aria-current="page" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Home
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#about">About</a></li>
-                            <li><a class="dropdown-item" href="#meet-our-teachers">The teachers</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#find-us-here">Find us here</a></li>
-                        </ul>
+                    <!-- active dropdown-toggle // aria-current="page" -->
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="#teachers">Teachers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#pricing">Pricing</a>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-outline ms-lg-3 fw-medium">Join now</button>
+                        <a class="nav-link" href="#location">Location</a>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline ms-lg-3 fw-medium">Join now</button>
                     </li>
                 </ul>
             </div>
@@ -250,7 +243,7 @@
         </section>
 
         <!-- Meet our teachers section -->
-        <section id="meet-our-teachers" class="section">
+        <section id="teachers" class="section">
 
             <div class="container">
                 <div class="row">
@@ -365,8 +358,85 @@
 
         </section>
 
+        <!-- Pricing section -->
+        <section id="pricing" class="section">
+            <div class="container">
+                <div class="row text-center justify-content-evenly">
+
+                    <h3 class="display-5 mb-5">Pricing</h3>
+
+                    <table class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <thead>
+                            <tr>
+                                <th>Monthly</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>£120</td>
+                            </tr>
+                            <tr>
+                                <td>1 hour lesson<br>p/week</td>
+                            </tr>
+                            <tr>
+                                <td>2 ensembles<br>p/week</td>
+                            </tr>
+                            <tr>
+                                <td>Music exam<br>preparation</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <thead>
+                            <tr>
+                                <th>Quarterly</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>£345</td>
+                            </tr>
+                            <tr>
+                                <td>1 hour lesson<br>p/week</td>
+                            </tr>
+                            <tr>
+                                <td>2 ensembles<br>p/week</td>
+                            </tr>
+                            <tr>
+                                <td>Music exam<br>preparation</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <thead>
+                            <tr>
+                                <th>Yearly</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>£1360</td>
+                            </tr>
+                            <tr>
+                                <td>1 hour lesson<br>p/week</td>
+                            </tr>
+                            <tr>
+                                <td>2 ensembles<br>p/week</td>
+                            </tr>
+                            <tr>
+                                <td>Music exam<br>preparation</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </section>
+
         <!-- Find us here section -->
-        <section id="find-us-here" class="section">
+        <section id="location" class="section">
 
             <div class="container">
                 <div class="row">
@@ -396,63 +466,63 @@
             </div>
         </section>
 
-        <!-- Footer with classes to keep footer at the bottom -->
-        <footer class="section mt-auto">
-            <div class="container">
-                <div class="row justify-content-center">
+    </main>
 
-                    <!-- Contact info -->
-                    <div class="col-12 col-sm-6 col-md-5 col-xl-4 text-center text-md-start">
+    <!-- Footer with classes to keep footer at the bottom -->
+    <footer class="section mt-auto">
+        <div class="container">
+            <div class="row justify-content-center">
 
-                        <h3>Contact info</h3>
+                <!-- Contact info -->
+                <div class="col-12 col-sm-6 col-md-5 col-xl-4 text-center text-md-start">
 
-                        <address>
-                            <i class="fa-solid fa-location-dot"></i> <strong>Barbican Centre</strong><br>
-                            Silk Street, Barbican<br>
-                            London, EC2Y 8DS
-                        </address>
+                    <h3>Contact info</h3>
 
-                        <p>
-                            <i class="fa-solid fa-phone"></i> 020 1234 5678<br>
-                            <i class="fa-regular fa-paper-plane"></i> info@fj-school.edu
-                        </p>
+                    <address>
+                        <i class="fa-solid fa-location-dot"></i> <strong>Barbican Centre</strong><br>
+                        Silk Street, Barbican<br>
+                        London, EC2Y 8DS
+                    </address>
 
-                    </div>
-
-                    <!-- Social media links -->
-                    <div class="col-12 col-sm-6 col-md-5 col-xl-4 text-center mt-4 mt-sm-0">
-
-                        <h3>Social links</h3>
-
-                        <div class="social-links my-3 my-sm-4">
-                            <a class="mx-2" href="https://www.instagram.com" target="_blank"
-                                aria-label="Visit our Instagram page (opens in a new tab)" rel="noopener">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a class="mx-2" href="https://www.facebook.com" target="_blank"
-                                aria-label="Visit our Facebook page (opens in a new tab)" rel="noopener">
-                                <i class="fa-brands fa-square-facebook"></i>
-                            </a>
-                            <a class="mx-2" href="https://www.x.com" target="_blank"
-                                aria-label="Visit our X feed (opens in a new tab)" rel="noopener">
-                                <i class="fa-brands fa-x-twitter"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- logo -->
-                    <div>
-                        <a class="span-szg text-center mt-5 mx-auto" href="https://github.com/SebZG" target="_blank"
-                            rel="noopener">
-                            SZG()
-                        </a>
-                    </div>
+                    <p>
+                        <i class="fa-solid fa-phone"></i> 020 1234 5678<br>
+                        <i class="fa-regular fa-paper-plane"></i> info@fj-school.edu
+                    </p>
 
                 </div>
-            </div>
-        </footer>
 
-    </main>
+                <!-- Social media links -->
+                <div class="col-12 col-sm-6 col-md-5 col-xl-4 text-center mt-4 mt-sm-0">
+
+                    <h3>Social links</h3>
+
+                    <div class="social-links my-3 my-sm-4">
+                        <a class="mx-2" href="https://www.instagram.com" target="_blank"
+                            aria-label="Visit our Instagram page (opens in a new tab)" rel="noopener">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a class="mx-2" href="https://www.facebook.com" target="_blank"
+                            aria-label="Visit our Facebook page (opens in a new tab)" rel="noopener">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </a>
+                        <a class="mx-2" href="https://www.x.com" target="_blank"
+                            aria-label="Visit our X feed (opens in a new tab)" rel="noopener">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- logo -->
+                <div>
+                    <a class="span-szg text-center mt-4 mx-auto" href="https://github.com/SebZG" target="_blank"
+                        rel="noopener">
+                        SZG()
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
 
 </body>
 
