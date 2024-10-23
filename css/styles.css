@@ -23,8 +23,6 @@ CSS Variables
     --color-gold-yellow: #FFD700;
     /* Celeste (blue) */
     --color-celeste-blue: #A8F9FF;
-    /* (green) */
-    --color-green: #00FF00;
     /* Papaya Whip (off white) */
     --color-papayawhip-offwhite: #FFF1D0;
     /* White Smoke (white) */
@@ -267,6 +265,10 @@ footer address i,
 footer p i {
     margin-right: 0.5rem;
     color: var(--color-celeste-blue);
+}
+
+footer .social-links a {
+    text-decoration: none;
 }
 
 footer .social-links i {
