@@ -67,38 +67,6 @@ body {
     scroll-margin-top: 106px;
 }
 
-/* Buttons */
-
-#location .btn-bg {
-    background-color: var(--color-rojo-red);
-    color: var(--color-black-111);
-    text-wrap: nowrap;
-}
-
-#location .btn-bg:hover {
-    background-color: var(--color-celeste-blue);
-    color: var(--color-rojo-red);
-}
-
-#location .btn-bg:active {
-    outline: 2px solid var(--color-rojo-red);
-}
-
-.nav-item .btn-outline {
-    border: 2px solid var(--color-rojo-red);
-    color: var(--color-rojo-red);
-}
-
-.nav-item .btn-outline:hover {
-    border: 2px solid var(--color-celeste-blue);
-    color: var(--color-celeste-blue);
-}
-
-.nav-item .btn-outline:active {
-    background-color: var(--color-celeste-blue);
-    color: var(--color-rojo-red);
-}
-
 /* Utilities */
 
 .section {
@@ -126,6 +94,44 @@ body {
 
 .span-szg:hover {
     outline: 1px solid var(--color-whitesmoke-white);
+}
+
+/* Buttons */
+
+#location .btn-bg,
+#contact-form .btn-bg,
+#success .btn-bg {
+    background-color: var(--color-rojo-red);
+    color: var(--color-black-111);
+    text-wrap: nowrap;
+}
+
+#location .btn-bg:hover,
+#contact-form .btn-bg:hover,
+#success .btn-bg:hover {
+    background-color: var(--color-celeste-blue);
+    color: var(--color-rojo-red);
+}
+
+#location .btn-bg:active,
+#contact-form .btn-bg:active,
+#success .btn-bg:active {
+    outline: 2px solid var(--color-rojo-red);
+}
+
+.nav-item .btn-outline {
+    border: 2px solid var(--color-rojo-red);
+    color: var(--color-rojo-red);
+}
+
+.nav-item .btn-outline:hover {
+    border: 2px solid var(--color-celeste-blue);
+    color: var(--color-celeste-blue);
+}
+
+.nav-item .btn-outline:active {
+    background-color: var(--color-celeste-blue);
+    color: var(--color-rojo-red);
 }
 
 /* 
