@@ -80,14 +80,13 @@ body {
 .span-szg {
     font-family: 'Fira Code', monospace;
     font-weight: 500;
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: var(--color-whitesmoke-white);
-    background-color: var(--color-szg-bg-blue);
 
     display: block;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
     border-radius: 50%;
     text-decoration: none;
 }
