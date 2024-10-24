@@ -537,19 +537,14 @@
 <script>
     // Close the navbar on mobile view when a link is clicked
     document
-        .querySelectorAll(".dropdown-menu .dropdown-item")
-        .forEach((item) => {
-            item.addEventListener("click", function () {
-                document
-                    .querySelector(".navbar-collapse")
-                    .classList.remove("show"); // Collapse navbar
+        .querySelectorAll(".navbar-collapse .nav-link")
+        .forEach((link) => {
+            link.addEventListener("click", function (e) {
+                    document
+                        .querySelector(".navbar-collapse")
+                        .classList.remove("show"); // Collapse navbar
             });
         });
-
-    // Dynamic year for the footer
-    // const year = new Date().getFullYear();
-    // const copyrightYear = document.querySelector("span-year");
-    // copyrightYear.innerHTML = year;
 </script>
 
 </html>
