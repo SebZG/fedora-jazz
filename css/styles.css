@@ -140,6 +140,12 @@ Navbar
 nav {
     background-color: var(--color-black-111);
     opacity: 95%;
+
+    /* For smoother hiding/showing navbar on scroll.
+       Credits to w3schools.com.
+       Customized to suit project.
+    */
+    transition: top 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-item,
