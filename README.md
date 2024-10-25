@@ -1,1 +1,1 @@
-# Fedora - School of Jazz
+# Fedora Jazz School
