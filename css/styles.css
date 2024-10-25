@@ -329,3 +329,13 @@ footer .social-links i:hover {
     color: var(--color-papayawhip-offwhite);
     transition: all 0.3s ease-in-out;
 }
+
+/* 
+Media queries
+*/
+
+@media screen and (max-width: 576px) {
+    .card-grid-img {
+        max-height: 250px;
+    }
+}
