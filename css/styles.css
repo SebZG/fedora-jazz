@@ -45,7 +45,15 @@ body {
     font-family: var(--font-poppins);
     background-color: var(--color-papayawhip-offwhite);
     color: var(--color-black-111);
-    padding-top: 6.5rem;
+    padding-top: 106px;
+    transition: padding-top 0.25s ease-in-out;
+}
+
+/* Change padding-top dynamically
+   for when navbar is hidden
+*/
+body.navbar-hidden {
+    padding-top: 0px;
 }
 
 /* Change the color of the selected text
@@ -62,17 +70,25 @@ body {
     color: var(--color-black-111);
 }
 
-#about,
-#teachers,
-#pricing,
-#location {
-    scroll-margin-top: 106px;
+/* Reduce repetition of Bootstrap classes */
+#about h2,
+#teachers h2,
+#location h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#pricing h2 {
+    margin-bottom: 3rem;
 }
 
 /* Utilities */
 
 .section {
     padding: 3rem 0;
+
+    /* For no navbar overlap */
+    scroll-margin-top: 106px;
 }
 
 .span-red {
@@ -147,7 +163,11 @@ nav {
        Credits to w3schools.com.
        Customized to suit project.
     */
-    transition: top 0.3s ease-in-out;
+    transition: top 0.25s ease-in-out;
+}
+
+nav .nav-item {
+    margin-left: auto;
 }
 
 .navbar-nav .nav-item,
@@ -220,6 +240,10 @@ About section
 .carousel-img {
     height: 400px;
     object-fit: cover;
+
+    /* Reduce repetition of Bootstrap's default classes */
+    display: block;
+    width: 100%;
 }
 
 /* 
@@ -240,6 +264,11 @@ Meet our teachers section
     overflow-y: scroll;
     max-height: calc(100vh - 110px);
     padding: 1.5rem 3rem 3rem 3rem;
+}
+
+.card {
+    /* Reduce repetition of Bootstrap's default classes */
+    height: 100%;
 }
 
 .card-grid-img {
@@ -318,8 +347,10 @@ footer p i {
     color: var(--color-celeste-blue);
 }
 
+/* Reduce repetition of Bootstrap classes */
 footer .social-links a {
     text-decoration: none;
+    margin: 0 0.5rem;
 }
 
 footer .social-links i {
