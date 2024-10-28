@@ -367,7 +367,13 @@ footer .social-links i:hover {
 Media queries
 */
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 320px) {
+    .teachers-cards {
+        padding: 0rem 0rem 1rem 0rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
     .card-grid-img {
         max-height: 250px;
     }
