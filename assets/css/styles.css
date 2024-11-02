@@ -229,6 +229,15 @@ nav .navbar-brand p {
 }
 
 /* 
+Hero Section
+*/
+
+#hero video {
+    width: 75%;
+    height: auto;
+}
+
+/* 
 About section
 */
 
