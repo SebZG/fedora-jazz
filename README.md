@@ -1,1 +1,233 @@
 # Fedora Jazz School
+
+This site's purpose is to promote the Fedora Jazz School to musicians of all levels wanting to learn about the art of Jazz. It will inform potential students of the services, prices and location of the school while providing an easy user friendly interface and experience. 
+
+## Features
+
+### Existing Features
+
+#### Navbar
+
+- __Navigation Section__
+
+  - Featured on all pages, the fully responsive navigation bar with links to the different sections of the home page and the contact page.
+  - The logo will always take the user to the home page.
+  - The button "Join now" will take the user to the contact page, where the navbar will have the "Join now" button removed since it does not apply to the contact page.
+  - The navbar will always allow the user to easily navigate the site without using the "back" and "forward" buttons on the browser.
+  - The navbar collapses on smaller screens providing a "burger" menu with the links to the different sections of the home page and the contact page.
+  - The navbar hides when the user scrolls down the page and shows when the user scrolls up the page - This is to provide a larger view height of the site for medium to small screens resulting in an elevated user experience.
+
+##### Navbar
+![Navbar](./assets/media/readme-images/fj-navbar.png)
+
+##### Navbar - Contact/Success Page
+![Navbar - Contact Page](./assets/media/readme-images/fj-navbar-contact-page.png)
+
+##### Navbar Collapsed
+![Navbar Collapsed](./assets/media/readme-images/fj-navbar-collapsed.png)
+
+#### Home Page
+  
+- __Hero section__
+
+  - The hero section features a video to excite the user to learn more about the school.
+  - The video is muted (although has no sounds), looped, and has auto play disabled for user worried about data usage.
+  - The video has controls for the user to pause and play the video, and toggle between full screen and normal view.
+  - The video is short (20s) to save user bandwidth.
+  - The video's resolution has been lowered to save user bandwidth. 
+  - The video is responsive and scales to fit the screen.
+
+![Hero Video](./assets/media/readme-images/fj-hero-video.png)
+
+
+- __About Section__
+
+  - The about section features information about what the school offers and it's teachers.
+  - The about section has a carousel that shows the different instruments that are taught.
+  - The carousel images are in `.webp` format.
+  - The about section is responsive to different screen sizes.
+
+![About Section](./assets/media/readme-images/fj-about.png)
+
+- __Teachers Section__
+
+  - The teachers section features a Bootstrap card grid that show the different teachers.
+  - The card grid is scrollable vertically and adjusts to user's view port height.
+  - The cards include a picture, name, and the instrument(s) that they teach.
+  - The card's images are in `.webp` format.
+  - The card grid is responsive to different screen sizes.
+
+![Teachers Section](./assets/media/readme-images/fj-teachers.png)
+
+- __Pricing Section__
+
+  - The pricing section features the the pricing presented in a HTML table element. 
+  - The pricing section is responsive to different screen sizes.
+
+![Pricing Section](./assets/media/readme-images/fj-price.png)
+
+- __Location Section__
+
+  - The location section features the location of the school in a Google Maps iframe.
+  - It has a call to action button that takes the user to the contact page.
+  - The location section is responsive to different screen sizes.
+
+![Location Section](./assets/media/readme-images/fj-location.png)
+
+#### Footer
+
+- __Footer Section__
+
+  - The footer features contact info such as address, number, and email.
+  - The footer has social media links.
+  - The footer is responsive to different screen sizes.
+
+![Footer](./assets/media/readme-images/fj-footer.png)
+
+#### Contact Page
+
+- __Contact Form__
+
+  - The contact form features a form that takes the user's name, email, phone no., and message.
+  - When submitting the form, the user is redirected to a success page.
+  - The contact page/form is responsive to different screen sizes.
+
+![Contact Form](./assets/media/readme-images/fj-contact.png)
+
+#### Success Page
+
+- __Success Message__
+
+  - The success message features a thank you message.
+  - The success message has a button that takes the user to the home page.
+  - The success page/message is responsive to different screen sizes.
+
+![Success Page](./assets/media/readme-images/fj-success.png)
+
+### Features for the future
+
+#### Teachers Page ([#10](https://github.com/SebZG/fedora-jazz/issues/10))
+
+- __Teachers Info__
+
+  - The teachers page will feature further information about each teacher.
+
+## Improvements for the future
+
+- Hosting images/videos on a CDN or cloud storage to reduce project size.
+
+## Testing
+
+
+### Lighthouse Score
+
+Lighthouse in Chrome Dev Tools was used to perform a performance test on the site.
+
+- Performance score was at 50-60% initially due to larger images and video sizes.
+  - Image sizes were reduced.
+  - Video resolution was lowered.
+- Accessibility score was below 75% initially due image formats.
+  - All images where converted to `.webp` format.
+
+![Lighthouse Score](./assets/media/readme-images/fj-lighthouse.png)
+
+### HTML Validator
+
+[W3C](https://validator.w3.org/nu/) HTML validator was used to validate the HTML code on all `.html` files.
+
+- All `.html` files passed.
+
+
+![HTML Validator](./assets/media/readme-images/fj-html-validator.png)
+
+### CSS Validators
+
+[W3C (Jigsaw)](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-running-2.0%252Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css) and [CCS Portal](https://www.cssportal.com/css-validator/) CSS validator were used to validate the CSS code.
+
+- Both validators gave errors due to use of Bootstrap, although working as expected.
+- Both validators gave errors due to use of CSS variables, although working as expected.
+- Both validators had issues parsing CSS code due to comments in file, all working as expected.
+  - Even with comments taken out, the validator still gave parsing errors.
+- Any error or issues that could be fixed were fixed.
+
+### Manual Testing
+
+#### __Links__
+- No broken links.
+- External links open in a new tab.
+
+#### __Form__
+- No form validation errors.
+- When submit button is clicked, the user is taken to success page.
+  - The success page has a button that takes the user to the home page.
+
+#### __Responsiveness__
+- Navbar is responsive to different screen sizes.
+  - Collapses on small screens.
+- All pages are responsive to different screen sizes.
+- All sections are responsive to different screen sizes.
+
+#### __Navbar__
+- Navbar is hidden when scrolling down on all pages.
+- Navbar is shown when scrolling up on all pages.
+
+#### __Navbar - Burger Menu__
+- Burger menu closes on click.
+
+### Unfixed Issues/Bugs
+
+No issues or bugs left unsolved at the moment.
+
+## Deployment
+
+This project was deployed using [GitHub Pages](https://pages.github.com/).
+
+## Credits/Tools/Technologies
+
+## Libraries
+
+- [__Bootstrap__](https://getbootstrap.com/)
+  - CSS Library for layouts, responsive design, and components.
+
+- [__Font Awesome__](https://fontawesome.com/)
+  - Icons library.
+
+- [__Google Fonts__](https://fonts.google.com/)
+  - Fonts library.
+
+## Code
+
+- [__W3Schools__](https://www.w3schools.com/)
+  - [Hide navbar on scroll](https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp)
+    - Adapted for project.
+
+### Design
+
+- [__Balsamiq__](https://balsamiq.com/)
+  -  Used to create the [wireframe](./docs/wireframes.pdf).
+
+- [__Adobe Color__](https://color.adobe.com/)
+  -  Used to create the [color palette](./docs/color-palette.png).
+
+### Media
+
+- [__Pexels__](https://www.pexels.com/)
+  - Used to source images.
+  - Used to source videos.
+
+### Editors
+
+- [__Canva__](https://www.canva.com/)
+  - Used to create the [logo](./public/fj-black-red-canva-500x500.webp).
+  - Used to create the [hero video](./assets/media/videos/fj-hero-video.mp4).
+
+- [__Cap Cut__](https://www.capcut.com/)
+  - Used to change the resolution of the [hero video](./assets/media/videos/fj-hero-video.mp4).
+
+### Other Tools
+
+- [Free Convert](https://www.freeconvert.com/)
+  - Used to convert images to `.webp` format.
+
+- [Image Resizer](https://imageresizer.com/)
+  - Used to resize images.
