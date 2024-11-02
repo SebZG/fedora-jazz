@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-	let navbarHidden;
+	let navbarHidden = false;
 
-	// Dynamically edit margin-top of body when navbar
-	// is hidden for seamless scrolling.
+	// Dynamically change margin-top of body 
+	// when navbar is hidden.
 	const addOrRemoveScrollMarginTop = () => {
 		const body = document.querySelector('body');
 		if (navbarHidden) {
-			body.classList.add('navbar-hidden');
+			body.classList.add('navbar-hidden'); // Remove margin-top
 		} else {
-			body.classList.remove('navbar-hidden');
+			body.classList.remove('navbar-hidden'); // Add margin-top
 		}
 	};
 

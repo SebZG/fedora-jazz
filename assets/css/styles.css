@@ -21,8 +21,6 @@ CSS Variables
     --color-black-333: #333;
     /* Rojo (red) */
     --color-rojo-red: #FF3131;
-    /* Gold (yellow) */
-    --color-gold-yellow: #FFD700;
     /* Celeste (blue) */
     --color-celeste-blue: #A8F9FF;
     /* Papaya Whip (off white) */
@@ -40,6 +38,10 @@ CSS Variables
 /* 
 Global Styles 
 */
+
+html {
+    font-size: 16px;
+}
 
 body {
     font-family: var(--font-poppins);
@@ -378,7 +380,7 @@ Media queries
 
 @media screen and (max-width: 320px) {
     .teachers-cards {
-        padding: 0rem 0rem 1rem 0rem;
+        padding: 0 0 1rem 0;
     }
 }
 
