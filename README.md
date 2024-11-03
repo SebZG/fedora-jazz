@@ -222,6 +222,7 @@ This project was deployed using [GitHub Pages](https://pages.github.com/).
 - [__Canva__](https://www.canva.com/)
   - Used to create the [logo](./public/fj-black-red-canva-500x500.webp).
   - Used to create the [hero video](./assets/media/videos/fj-hero-video.mp4).
+  - Used to create [mock ups](./docs/mock-up-landscape.png).
 
 - [__Cap Cut__](https://www.capcut.com/)
   - Used to change the resolution of the [hero video](./assets/media/videos/fj-hero-video.mp4).
