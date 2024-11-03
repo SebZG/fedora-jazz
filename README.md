@@ -1,6 +1,8 @@
 # Fedora Jazz School
 
-This site's purpose is to promote the Fedora Jazz School to musicians of all levels wanting to learn about the art of Jazz. It will inform potential students of the services, prices and location of the school while providing an easy user friendly interface and experience. 
+This site's purpose is to promote the Fedora Jazz School to musicians of all levels wanting to learn about the art of Jazz. It will inform potential students of the services, prices and location of the school while providing an easy user friendly interface and experience.
+
+![Mock Up](./docs/mock-up-landscape.png)
 
 ## Features
 
