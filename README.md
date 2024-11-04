@@ -329,13 +329,13 @@ The site will take a few seconds to deploy.
 
 ## Credits/Tools/Technologies
 
-## Languages
+### Languages
 
 - HTML
 - CSS
 - JavaScript
 
-## Libraries
+### Libraries
 
 - [__Bootstrap__](https://getbootstrap.com/)
   - CSS Library for layouts, responsive design, and components.
@@ -346,7 +346,7 @@ The site will take a few seconds to deploy.
 - [__Google Fonts__](https://fonts.google.com/)
   - Fonts library.
 
-## Code
+### Code
 
 - [__W3Schools__](https://www.w3schools.com/)
   - [Hide navbar on scroll](https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp)
