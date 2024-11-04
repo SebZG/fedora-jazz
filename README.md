@@ -329,6 +329,12 @@ The site will take a few seconds to deploy.
 
 ## Credits/Tools/Technologies
 
+## Languages
+
+- HTML
+- CSS
+- JavaScript
+
 ## Libraries
 
 - [__Bootstrap__](https://getbootstrap.com/)
