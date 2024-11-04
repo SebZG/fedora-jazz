@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// when navbar is hidden.
 	const addOrRemoveScrollMarginTop = () => {
 		const body = document.querySelector('body');
+
 		if (navbarHidden) {
 			body.classList.add('navbar-hidden'); // Remove margin-top
 		} else {
@@ -29,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			navbarHidden = true;
 		}
 
-		addOrRemoveScrollMarginTop();
 		prevScrollPos = currentScrollPos;
+		addOrRemoveScrollMarginTop(); // change body's margin-top
 	};
 
 	// Close the navbar on mobile view when a link is clicked.

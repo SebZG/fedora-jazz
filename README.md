@@ -2,6 +2,8 @@
 
 This site's purpose is to promote the Fedora Jazz School to musicians of all levels wanting to learn about the art of Jazz. It will inform potential students of the services, prices and location of the school while providing an easy user friendly interface and experience.
 
+[Live site](https://sebzg.github.io/fedora-jazz/)
+
 ![Mock Up](./docs/mock-up-landscape.png)
 
 ## Features
@@ -44,7 +46,7 @@ This site's purpose is to promote the Fedora Jazz School to musicians of all lev
 
 - __About Section__
 
-  - The about section features information about what the school offers and it's teachers.
+  - The about section features information about what the school offers.
   - The about section has a carousel that shows the different instruments that are taught.
   - The carousel images are in `.webp` format.
   - The about section is responsive to different screen sizes.
@@ -118,6 +120,67 @@ This site's purpose is to promote the Fedora Jazz School to musicians of all lev
 
 - Hosting images/videos on a CDN or cloud storage to reduce project size.
 
+## Design
+
+### User Stories
+
+User stories where used along side GitHub Projects to track progress of development.
+
+- See [here](https://github.com/users/SebZG/projects/3/views/1) for project board.
+- See [here](./docs/user-stories.md) for full list.
+
+### Media
+
+The style of the images and videos used in this project were chosen carefully to fit with the project's (jazz) theme.
+They should convey the sites purpose straight away to the user.
+
+### Colors
+
+The intention with the color theme was to give a vintage feel with the off-whites and blacks, while using brighter highlights for a modern touch.
+
+- __Main Colors__:
+  - Black: #111111
+  - Papaya Whip: #FFF1D0
+  - White Smoke: #F2F4F3
+  
+- __Highlight Colors__:
+  - Celeste: #A8F9FF
+  - Rojo: #FF3131
+
+![Color Palette](./docs/color-palette.png)
+
+### Typography
+
+- The font chosen for the site was "[Poppins](https://fonts.google.com/specimen/Poppins)" from the [Google Fonts](https://fonts.google.com/) library, with a fall back font of "sans-serif".
+- Not only is Poppins supported across different browsers, but it is easy to read and fitted well with the rest of the design.
+
+### Wireframes
+
+The wireframes for this project were created with [Balsamiq](https://balsamiq.com/).
+
+<details>
+
+ <summary>Home Page</summary>
+
+![Home Page Wireframe](docs/wireframe-home.png)
+ </details>
+
+
+ <details>
+
+ <summary>Contact Page</summary>
+
+![Contact Page Wireframe](docs/wireframe-contact.png)
+ </details>
+
+
+ <details>
+
+ <summary>Success Page</summary>
+
+![Success Page Wireframe](docs/wireframse-success.png)
+ </details>
+
 ## Testing
 
 
@@ -146,9 +209,9 @@ Lighthouse in Chrome Dev Tools was used to perform a performance test on the sit
 
 [W3C (Jigsaw)](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-running-2.0%252Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css) and [CCS Portal](https://www.cssportal.com/css-validator/) CSS validator were used to validate the CSS code.
 
-- Both validators gave errors due to use of Bootstrap, although working as expected.
-- Both validators gave errors due to use of CSS variables, although working as expected.
-- Both validators had issues parsing CSS code due to comments in file, all working as expected.
+- Both validators returned issues due to the use of Bootstrap, although working as expected. - No fixes available.
+- Both validators returned issues due to the use of CSS variables, although working as expected. - No fixes available.
+- Both validators had issues parsing CSS code due to comments in file, although all working as expected. - No fixes available.
   - Even with comments taken out, the validator still gave parsing errors.
 - Any error or issues that could be fixed were fixed.
 
@@ -176,13 +239,93 @@ Lighthouse in Chrome Dev Tools was used to perform a performance test on the sit
 #### __Navbar - Burger Menu__
 - Burger menu closes on click.
 
-### Unfixed Issues/Bugs
+## Bugs/Issues
 
-No issues or bugs left unsolved at the moment.
+### Resolved Bugs/Issues
+
+#### `margin-top` on `body` when hiding navbar
+
+__Issue__:
+
+- The `body` element had a `margin-top` to compensate for the navbar's `position: fixed` properties.<br> 
+- When hiding the navbar on scroll, the margin-top off the body needed to be adjusted.
+
+CSS
+```css
+body {
+  /* rest of properties */
+
+  margin-top: 106px; /* When navbar is showing */
+}
+```
+
+__Solution__:
+
+- JavaScript was used to dynamically change the margin-top of the `body` element when hiding/showing the navbar.
+
+CSS
+```css
+body.navbar-hidden {
+    padding-top: 0px; /* When navbar is hidden */
+}
+```
+
+JavaScript
+```js
+// Global variable to keep track of navbar's hidden state
+let navbarHidden = false;
+
+// Dynamically change margin-top of body 
+const addOrRemoveScrollMarginTop = () => {
+	const body = document.querySelector('body');
+		
+	if (navbarHidden) {
+		body.classList.add('navbar-hidden'); // Remove margin-top
+	} else {
+		body.classList.remove('navbar-hidden'); // Add margin-top
+	}
+};
+
+const navbar = document.querySelector('.navbar');
+let prevScrollPos = window.scrollY;
+
+// Hide navbar when scrolling down.
+window.onscroll = () => {
+	let currentScrollPos = window.scrollY;
+
+	if (prevScrollPos > currentScrollPos) {
+		navbar.style.top = '0px'; // Show navbar
+		navbarHidden = false;
+	} else {
+		navbar.style.top = '-106px'; // Hide navbar
+		navbarHidden = true;
+	}
+
+	prevScrollPos = currentScrollPos;
+	addOrRemoveScrollMarginTop(); // change body's margin-top
+};
+```
+
+### Unfixed Bugs/Issues
+
+- No issues or bugs left unsolved at the moment.
+- No errors in devtools console.
 
 ## Deployment
 
 This project was deployed using [GitHub Pages](https://pages.github.com/).
+
+Steps to deploy:
+
+- In project's repository, click on "Settings" in the top right corner.
+- Click on "Pages".
+- Under "Branch", select the branch and folder to deploy from.
+- Click "Save".
+
+The site will take a few seconds to deploy.
+
+- The status of the deployment can be seen by clicking on "Actions" tab on the top.
+- Once deployed, the link can be viewed in the "Pages" section from before.
 
 ## Credits/Tools/Technologies
 
